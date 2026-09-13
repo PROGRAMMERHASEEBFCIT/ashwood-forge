@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ashwood Forge</title>
+<meta name="description" content="Get in touch with Ashwood Forge to start a commission, book a class, or ask a question. Workshop hours, address and contact form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M6 34h20l4-6H10z" fill="#b8410e"/>
+        <rect x="28" y="24" width="14" height="6" fill="#efece4"/>
+        <rect x="30" y="14" width="4" height="12" fill="#efece4"/>
+        <path d="M4 40h26" stroke="#efece4" stroke-width="2"/>
+      </svg>
+      Ashwood Forge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section-tight">
+    <div class="container">
+      <h1>Start a conversation</h1>
+      <p>Tell us what you have in mind, or drop by the workshop during
+        opening hours — the kettle's usually on.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="container contact-grid">
+
+      <div>
+        <h2>Send a message</h2>
+        <p id="form-status" class="form-status" role="status" hidden></p>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+            <span class="field-error" id="name-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Choose one</option>
+              <option value="commission">New commission</option>
+              <option value="restoration">Tool restoration</option>
+              <option value="class">Booking a class</option>
+              <option value="other">Something else</option>
+            </select>
+            <span class="field-error" id="subject-error"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <span class="field-error" id="message-error"></span>
+          </div>
+
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </div>
+
+      <div>
+        <h2>Visit or write</h2>
+        <table class="info-table">
+          <tr><td>Address</td><td>14 Foundry Lane, Thornbury, TB3 2QF</td></tr>
+          <tr><td>Hours</td><td>Tuesday–Saturday, 9:00–17:00<br>Closed Sunday &amp; Monday</td></tr>
+          <tr><td>Phone</td><td>01234 567 890</td></tr>
+          <tr><td>Email</td><td>hello@ashwoodforge.example</td></tr>
+        </table>
+
+        <div class="social-row">
+          <a href="#" onclick="return false;">Instagram</a>
+          <a href="#" onclick="return false;">Etsy shop</a>
+        </div>
+
+        <iframe class="map-frame" title="Map showing the Ashwood Forge workshop location"
+          src="https://maps.google.com/maps?q=Thornbury&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Ashwood Forge</h4>
+      <p style="max-width:32ch;">A one-forge workshop in Thornbury making
+        knives, tools and ironwork the slow way.</p>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Workshop</h4>
+      <ul>
+        <li>14 Foundry Lane, Thornbury</li>
+        <li>Tue–Sat, 9:00–17:00</li>
+        <li>hello@ashwoodforge.example</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="current-year"></span> Ashwood Forge. All rights reserved.</span>
+    <span>Built with HTML, CSS &amp; JavaScript.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

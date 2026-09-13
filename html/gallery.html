@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Ashwood Forge</title>
+<meta name="description" content="Browse knives, ironwork, restorations and class photos from the Ashwood Forge workshop, filterable by category.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M6 34h20l4-6H10z" fill="#b8410e"/>
+        <rect x="28" y="24" width="14" height="6" fill="#efece4"/>
+        <rect x="30" y="14" width="4" height="12" fill="#efece4"/>
+        <path d="M4 40h26" stroke="#efece4" stroke-width="2"/>
+      </svg>
+      Ashwood Forge
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+    </button>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="section-tight">
+    <div class="container">
+      <h1>From the workshop floor</h1>
+      <p>A running record of what's left the anvil. Filter by category, or
+        click any piece for a closer look.</p>
+
+      <div class="filter-row" role="group" aria-label="Filter gallery by category">
+        <button class="filter-btn" data-filter="all" aria-pressed="true">All work</button>
+        <button class="filter-btn" data-filter="knives" aria-pressed="false">Knives</button>
+        <button class="filter-btn" data-filter="ironwork" aria-pressed="false">Ironwork</button>
+        <button class="filter-btn" data-filter="restorations" aria-pressed="false">Restorations</button>
+        <button class="filter-btn" data-filter="classes" aria-pressed="false">Classroom</button>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item" data-category="knives">
+          <img src="https://picsum.photos/seed/gyuto-knife/500/360" alt="Chef's knife with walnut handle on a wooden board.">
+          <figcaption>210mm gyuto — walnut &amp; brass, forged from leaf-spring</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="ironwork">
+          <img src="https://picsum.photos/seed/garden-gate/500/360" alt="Hand-scrolled wrought iron gate.">
+          <figcaption>Garden gate — hand-scrolled, six-week commission</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="restorations">
+          <img src="https://picsum.photos/seed/restored-axe/500/360" alt="Restored vintage axe with new hickory handle.">
+          <figcaption>1940s felling axe — reground, rehandled in hickory</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="knives">
+          <img src="https://picsum.photos/seed/hunting-knife/500/360" alt="Hunting knife with leather sheath.">
+          <figcaption>Hunting knife — full tang, hand-stitched sheath</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="classes">
+          <img src="https://picsum.photos/seed/forge-class/500/360" alt="Students working at forges during a class.">
+          <figcaption>Weekend intensive — first-time forging a bottle opener</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="ironwork">
+          <img src="https://picsum.photos/seed/fireplace-set/500/360" alt="Hand-forged iron fireplace tool set.">
+          <figcaption>Fireplace set — poker, tongs and stand</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="restorations">
+          <img src="https://picsum.photos/seed/hand-plane/500/360" alt="Restored wood-and-steel hand plane.">
+          <figcaption>Pre-war hand plane — sole flattened, blade reground</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="knives">
+          <img src="https://picsum.photos/seed/paring-knife/500/360" alt="Small paring knife with olive wood handle.">
+          <figcaption>Paring knife — olive wood, part of a three-piece set</figcaption>
+        </figure>
+        <figure class="gallery-item" data-category="classes">
+          <img src="https://picsum.photos/seed/hammer-lesson/500/360" alt="Instructor demonstrating hammer technique to a class.">
+          <figcaption>Taster day — hammer control before the first hook</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-box">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-body">
+      <button class="lightbox-close" aria-label="Close image">&times;</button>
+      <p id="lightbox-caption" style="margin:0;"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Ashwood Forge</h4>
+      <p style="max-width:32ch;">A one-forge workshop in Thornbury making
+        knives, tools and ironwork the slow way.</p>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Workshop</h4>
+      <ul>
+        <li>14 Foundry Lane, Thornbury</li>
+        <li>Tue–Sat, 9:00–17:00</li>
+        <li>hello@ashwoodforge.example</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; <span id="current-year"></span> Ashwood Forge. All rights reserved.</span>
+    <span>Built with HTML, CSS &amp; JavaScript.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
